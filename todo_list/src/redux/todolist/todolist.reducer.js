@@ -1,3 +1,5 @@
+import { addTodoToList } from './todolist.utility'
+
 const INITIAL_STATE = {
     todo:'',
     todoList: []
@@ -8,13 +10,13 @@ const todoListReducer = (state = INITIAL_STATE, action) => {
         case "ADD_TODO":
             return{
                 ...state,
-                todoList: [...state.todoList,...action.payload]
+                todoList: addTodoToList(state.todoList,action.payload)
             }
-            case "SET_TODO":
-                return{
-                    ...state,
-                    todo: action.payload
-                }
+        case "SET_TODO":
+            return{
+                ...state,
+                todo: action.payload
+            }
     
         default:
             return state

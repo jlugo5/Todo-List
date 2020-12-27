@@ -4,10 +4,9 @@ import { addTodo, setTodo } from "../../redux/todolist/todolist.action";
 import {connect} from 'react-redux'
 
 
-const HomePage = ({todo, addTodo}) => {
+const HomePage = ({todo, addTodo,setTodo}) => {
     const handleChange = event => {
-        todo = event.target.value
-        setTodo(todo)
+        setTodo(event.target.value)
         console.log(todo)
     }
     
