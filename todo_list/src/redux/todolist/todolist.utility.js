@@ -1,3 +1,3 @@
 export const addTodoToList = (todoList, addTodo) => (
-    [...todoList,{addTodo}]
+    [...todoList,{...addTodo}]
 )

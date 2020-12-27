@@ -16,7 +16,6 @@ import TodoList from './pages/todolist/todo-list.component'
 
 class App extends React.Component{
   render(){
-    const
     return(
       <div className='App'>
         <h1>Todo List</h1>

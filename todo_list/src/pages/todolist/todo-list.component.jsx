@@ -5,7 +5,7 @@ const TodoList = ({todoList}) => {
     return(<div>
         <h3>Todo List</h3>
         {
-            todoList.map(todo => <h4 key={x++} >{todo.todoList}</h4>)
+            todoList.map(todo => <h4 key={x++} >{todo.todo}</h4>)
         }
     </div>)
 }
