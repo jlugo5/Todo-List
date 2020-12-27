@@ -9,14 +9,16 @@
 
 import './App.css'
 import React from 'react'
+import HomePage from './pages/homepage/homepage.component'
+import TodoList from './pages/todolist/todo-list.component'
 
 class App extends React.Component{
   render(){
     return(
       <div className='App'>
         <h1>Todo List</h1>
-        <h2>Home Page</h2>
-        <h2>Todo List Page</h2>
+        <HomePage />
+        <TodoList />
       </div>
       
     )
