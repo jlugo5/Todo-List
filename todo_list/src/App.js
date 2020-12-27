@@ -7,6 +7,8 @@
 // Redux
 // Redux Logger
 
+// 11:30 ends
+
 import './App.css'
 import React from 'react'
 import HomePage from './pages/homepage/homepage.component'
@@ -14,6 +16,7 @@ import TodoList from './pages/todolist/todo-list.component'
 
 class App extends React.Component{
   render(){
+    const
     return(
       <div className='App'>
         <h1>Todo List</h1>
@@ -24,5 +27,5 @@ class App extends React.Component{
     )
   }
 }
-
+// Hello
 export default App
