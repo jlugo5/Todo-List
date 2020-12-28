@@ -1,4 +1,5 @@
 import {connect} from 'react-redux'
+import { Link } from 'react-router-dom'
 
 const TodoList = ({todoList}) => {
     let x = 1
@@ -7,6 +8,7 @@ const TodoList = ({todoList}) => {
         {
             todoList.map(todo => <h4 key={x++} >{todo.todo}</h4>)
         }
+        <Link to='/'>GO TO ADD TODO</Link>
     </div>)
 }
 

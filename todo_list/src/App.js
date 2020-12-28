@@ -13,18 +13,18 @@ import './App.css'
 import React from 'react'
 import HomePage from './pages/homepage/homepage.component'
 import TodoList from './pages/todolist/todo-list.component'
+import { Switch, Route } from 'react-router-dom'
 
-class App extends React.Component{
-  render(){
+const App = () => {
     return(
       <div className='App'>
         <h1>Todo List</h1>
-        <HomePage />
-        <TodoList />
+        <Switch>
+          <Route exact path='/' component={HomePage} />
+          <Route exact path='/todolist' component={TodoList} />
+        </Switch>
       </div>
-      
     )
-  }
 }
 // Hello
 export default App
