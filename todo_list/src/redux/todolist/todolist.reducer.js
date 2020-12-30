@@ -1,5 +1,3 @@
-import { addTodoToList } from './todolist.utility'
-
 const INITIAL_STATE = {
     todo:'',
     todoList: []
@@ -8,10 +6,12 @@ const INITIAL_STATE = {
 const todoListReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case "ADD_TODO":
+            //alert("Todo Added")
             return{
-                ...state,
-                todoList: addTodoToList(state.todoList,action.payload)
+                //...state,
+                todoList: [...state.todoList,action.payload]
             }
+            
         case "SET_TODO":
             return{
                 ...state,

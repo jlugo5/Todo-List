@@ -6,15 +6,15 @@ const TodoList = ({todoList}) => {
     return(<div>
         <h3>Todo List</h3>
         {
-            todoList.map(todo => <h4 key={x++} >{todo.todo}</h4>)
+            todoList.map(todo => <h4 key={x++} >{todo}</h4>)
         }
         <Link to='/'>GO TO ADD TODO</Link>
     </div>)
 }
 
-const mapStateToProps= ({todo}) => (
+const mapStateToProps= ({todo: {todoList}}) => (
     {
-        todoList: todo.todoList
+        todoList
     }
 )
 export default connect(mapStateToProps,null)(TodoList)

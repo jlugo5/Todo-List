@@ -10,11 +10,16 @@ const HomePage = ({todo, addTodo,setTodo}) => {
         setTodo(event.target.value)
         console.log(todo)
     }
+
+    const handleSubmit = () =>{
+        if(addTodo(todo))
+            alert("Todo Added")
+    }
     
     return(<div>
         <h3>Home Page</h3>
         <InputBox handleChange={handleChange}/>
-        <CustomButton onClick={() => addTodo({todo})}>ENTER</CustomButton>
+        <CustomButton onClick={handleSubmit}>ENTER</CustomButton>
         <Link to='/todoList'>GO TODO LIST</Link>
     </div>)
 }

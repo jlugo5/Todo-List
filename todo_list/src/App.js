@@ -15,7 +15,17 @@ import HomePage from './pages/homepage/homepage.component'
 import TodoList from './pages/todolist/todo-list.component'
 import { Switch, Route } from 'react-router-dom'
 
-const App = () => {
+class App extends React.Component {
+
+  componentDidUpdate(prevProps,prevState){
+    console.log(prevProps)
+    console.log(prevState)
+    if(this.props.state.todoList !== prevState.state.todoList )
+      alert("Todo Added")
+  }
+  
+
+  render(){
     return(
       <div className='App'>
         <h1>Todo List</h1>
@@ -24,7 +34,7 @@ const App = () => {
           <Route exact path='/todolist' component={TodoList} />
         </Switch>
       </div>
-    )
+  )}
 }
 // Hello
 export default App
